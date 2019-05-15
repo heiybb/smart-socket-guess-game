@@ -148,7 +148,12 @@ public class ServerMsgProcessor implements MessageProcessor<String>, Runnable {
                             " %d players ahead of you",
                     playerName, PENDING_QUEUE.size() - 1));
 
-            logger.info("Player {} registered successful", playerName);
+            try {
+                logger.info("IPP INFO: {} -> Player {} registered successful",
+                        session.getRemoteAddress(),
+                        playerName);
+            } catch (IOException ignored) {
+            }
         }
     }
 

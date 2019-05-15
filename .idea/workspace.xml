@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="875c96dc-bd45-4b88-8e71-6a52a3c57b61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoPic/disableBoth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoPic/enableBoth.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/disableBoth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enableBoth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/ServerMsgProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/ServerMsgProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoPic/ServerRunning.png" beforeDir="false" afterPath="$PROJECT_DIR$/demoPic/ServerRunning.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/src/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+            <state relative-caret-position="406">
+              <caret line="73" column="44" lean-forward="true" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#RoundTimer#0;class#Server#0" />
@@ -38,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/src/SessionProfile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
+            <state relative-caret-position="720">
               <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,8 +45,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/src/ServerMsgProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="415">
+              <caret line="165" column="7" lean-forward="true" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,8 +58,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="306">
-                <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <first_editor relative-caret-position="288">
+                <caret line="19" column="69" lean-forward="true" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
               </first_editor>
               <second_editor />
             </state>
@@ -154,11 +152,11 @@
         <option value="$PROJECT_DIR$/Client/src/ClientMsgProcessor.java" />
         <option value="$PROJECT_DIR$/Server/src/SessionProfile.java" />
         <option value="$PROJECT_DIR$/Client/src/batchTest.bat" />
-        <option value="$PROJECT_DIR$/Server/src/ServerMsgProcessor.java" />
         <option value="$PROJECT_DIR$/Client/src/Client.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Server/src/Server.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Server/src/ServerMsgProcessor.java" />
       </list>
     </option>
   </component>
@@ -183,22 +181,6 @@
               <item name="npAssignB" type="b2602c69:ProjectViewProjectNode" />
               <item name="npAssignB" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="npAssignB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="npAssignB" type="462c0819:PsiDirectoryNode" />
-              <item name="demoPic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="npAssignB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="npAssignB" type="462c0819:PsiDirectoryNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="npAssignB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="npAssignB" type="462c0819:PsiDirectoryNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -209,6 +191,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/log-20190515.log" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -355,7 +338,8 @@
       <workItem from="1557900287980" duration="34000" />
       <workItem from="1557900336106" duration="216000" />
       <workItem from="1557900566955" duration="1175000" />
-      <workItem from="1557901902963" duration="2515000" />
+      <workItem from="1557901902963" duration="2945000" />
+      <workItem from="1557904918441" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="ignore">
       <created>1557900747755</created>
@@ -389,7 +373,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182144000" />
+    <option name="totallyTimeSpent" value="183172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,7 +388,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15245202" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15405117" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -414,7 +398,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3629469" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.16901408" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" weight="0.9122427" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4989339" weight="0.17551462" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.35969663" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -519,13 +503,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/IDE/Java/JDK8/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="240" column="13" selection-start-line="240" selection-start-column="7" selection-end-line="240" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/IDE/Java/JDK8/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -635,18 +612,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/SessionState.java" />
-    <entry file="file://$PROJECT_DIR$/log-20190515.log">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="90">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -720,11 +685,12 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="739.5" y="379.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="740.0" y="380.0" />
           <SelectedNodes />
           <Categories>
             <Category>All</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
           <VISIBILITY>Details</VISIBILITY>
         </state>
       </provider>
@@ -780,14 +746,14 @@
               <point x="-57.0" y="92.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.4235234729934377" x="-672.8915375446961" y="556.6746126340881" />
+          <settings layout="Hierarchic Group" zoom="0.4235234729934377" x="-673.0" y="557.0" />
           <SelectedNodes>
             <node>lib</node>
           </SelectedNodes>
           <Categories>
-            <Category>Methods</Category>
-            <Category>Constructors</Category>
             <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
           </Categories>
           <SCOPE>Project Files</SCOPE>
           <VISIBILITY>private</VISIBILITY>
@@ -849,33 +815,30 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="518.5" y="465.375" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="519.0" y="465.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Properties</Category>
-            <Category>Methods</Category>
-            <Category>Constructors</Category>
             <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
           </Categories>
           <SCOPE>Project Files</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/SessionProfile.java">
+    <entry file="file://$PROJECT_DIR$/log-20190515.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="11" column="89" lean-forward="true" selection-start-line="11" selection-start-column="89" selection-end-line="11" selection-end-column="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        <state relative-caret-position="406">
+          <caret line="73" column="44" lean-forward="true" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#RoundTimer#0;class#Server#0" />
@@ -883,18 +846,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/SessionProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Server/src/lib/aio-core-1.4.1-sources.jar!/org/smartboot/socket/transport/AioSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="359" column="50" selection-start-line="359" selection-start-column="35" selection-end-line="359" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/ServerMsgProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="415">
+          <caret line="165" column="7" lean-forward="true" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="306">
-            <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <first_editor relative-caret-position="288">
+            <caret line="19" column="69" lean-forward="true" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
           </first_editor>
           <second_editor />
         </state>
