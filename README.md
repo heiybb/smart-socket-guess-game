@@ -1,6 +1,7 @@
 # COSC1176/1179 – Network Programming (NP) Assignment (2019 Semester 1)
 
 ## Guess Game Multiplayer Version Manual Document
+
 ### Build & Run
 **Server**  
 ``javac -cp .:lib/* *.java``  
@@ -13,13 +14,17 @@
 **Options**  
 ``java -cp .;lib\* Client 127.0.0.1 51900 t t``  
 Connect to 127.0.0.1:51900 with auto register auto guess both enable  
+![Both Enable](demoPic/enableBoth.png)  
+
 ``java -cp .;lib\* Client 127.0.0.1 51900 f f``  
 Connect to 127.0.0.1:51900 with auto register auto guess both disable  
+![Both Disable](demoPic/disableBoth.png)  
 
 **Tips**: Replace ``:`` with ``;`` and ``/`` with ``\`` in windows  
 
 ### Check port
 Run ``netstat -an |grep tcp|grep :`` to check if the port is occupied or not  
+
 ### Game Rules
 - Server will generate a number range of 0-9 every round.
 - Server limit 3 registered players can play at the same time.
@@ -49,3 +54,20 @@ This command is only available when you escape from a guess round or finished a 
 **Quit**  
 Use ``q`` to quit the game anytime, you will be disconnected from the server and quit the game entirely.  
 This command is available at anytime.  
+
+### Runing Screenshot
+**Server Side**  
+![](demoPic/ServerRunning.png)  
+
+**Client Side**  
+![](demoPic/ClientRunning.png)  
+
+### Diagrams
+**Client Class Diagram**  
+![](demoPic/ClientClassDiagram.png)  
+
+**Server Class Diagram**  
+![](demoPic/ServerClassDiagram.png) 
+
+**Session State Diagram**
+![](demoPic/ClientStateDiagram.png)

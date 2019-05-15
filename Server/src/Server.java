@@ -64,7 +64,7 @@ public class Server {
                 TARGET = new Random().nextInt(MAX - MIN + 1) + MIN;
 
                 logger.info("-- Round {} generated, Target Number: {} --",
-                        ++roundCounter,
+                        roundCounter++,
                         TARGET);
                 //Transit the PENDING players to GAME
                 ServerMsgProcessor.transitPendingToGame();
