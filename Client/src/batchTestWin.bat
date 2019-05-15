@@ -1,0 +1,5 @@
+start cmd.exe /k "java -cp .;lib\* Client 127.0.0.1 51900 t t"
+start cmd.exe /k "java -cp .;lib\* Client 127.0.0.1 51900 t t"
+start cmd.exe /k "java -cp .;lib\* Client 127.0.0.1 51900 t t"
+start cmd.exe /k "java -cp .;lib\* Client 127.0.0.1 51900 t t"
+start cmd.exe /k "java -cp .;lib\* Client 127.0.0.1 51900 t t"
