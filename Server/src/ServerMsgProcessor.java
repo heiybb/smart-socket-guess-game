@@ -37,7 +37,7 @@ public class ServerMsgProcessor implements MessageProcessor<String>, Runnable {
     private static final String PLAY_CMD = "p";
     private static final String QUIT_CMD = "q";
 
-    private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(50);
+    private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(3);
     private static final ConcurrentHashMap<AioSession<String>, SessionProfile> SESSION_POOL = new ConcurrentHashMap<>();
     private static ConcurrentLinkedQueue<AioSession<String>> PENDING_QUEUE = new ConcurrentLinkedQueue<>();
     private static ConcurrentLinkedQueue<AioSession<String>> GAME_QUEUE = new ConcurrentLinkedQueue<>();
@@ -144,7 +144,7 @@ public class ServerMsgProcessor implements MessageProcessor<String>, Runnable {
             SESSION_POOL.get(session).setReg(true);
             PENDING_QUEUE.offer(session);
             aioWrite(session, String.format("Register as %s," +
-                            " please wait for game round," +
+                            " you are added to the pending queue now," +
                             " %d players ahead of you",
                     playerName, PENDING_QUEUE.size() - 1));
 
@@ -245,7 +245,7 @@ public class ServerMsgProcessor implements MessageProcessor<String>, Runnable {
             UNDEFINED_QUEUE.offer(session);
             logger.info("Player {} choose to escape the guess", escapePlayer);
 
-            aioWrite(session, "Type p to play again or type q to quit");
+            aioWrite(session, "---> Type p to play again or type q to quit <---");
         } else {
             throw new InvalidInputException("e command is currently unavailable");
         }

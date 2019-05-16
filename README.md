@@ -3,15 +3,15 @@
 ## Guess Game Multiplayer Version Manual Document
 
 ### Build & Run
-**Server**  
+#### Server  
 ``javac -cp .:lib/* *.java``  
 ``java -cp .:lib/* Server``  
 
-**Client**     
+#### Client     
 ``javac -cp .:lib/* *.java``  
 ``java -cp .:lib/* Client <host> <port> <autoReg> <autoGuess>`` 
 
-**Options**  
+#### Options  
 ``java -cp .;lib\* Client 127.0.0.1 51900 t t``  
 Connect to 127.0.0.1:51900 with auto register auto guess both enable  
 ![Both Enable](demoPic/enableBoth.png)  
@@ -23,11 +23,11 @@ Connect to 127.0.0.1:51900 with auto register auto guess both disable
 **Tips**: Replace ``:`` with ``;`` and ``/`` with ``\`` in windows  
 
 ### Check port
-Run ``netstat -an |grep tcp|grep :`` to check if the port is occupied or not  
+Run ``netstat -an|grep tcp|grep :`` replace ``:`` with ``port`` to check if the port is occupied or not  
 
 ### Game Rules
 - Server will generate a number range of 0-9 every round.
-- Server limit 3 registered players can play at the same time.
+- Server limit 3 registered players to play at the same time.
 - Player has 4 chances to guess, clue will be given if guess the wrong answer.
 - Each round has a 35 seconds time limit.
 - Client has a 30 seconds AFK time limit while not in the pending status.
@@ -55,19 +55,29 @@ This command is only available when you escape from a guess round or finished a 
 Use ``q`` to quit the game anytime, you will be disconnected from the server and quit the game entirely.  
 This command is available at anytime.  
 
-### Runing Screenshot
-**Server Side**  
+### Running Screenshot
+#### Server Side  
 ![](demoPic/ServerRunning.png)  
 
-**Client Side**  
+#### Client Side  
 ![](demoPic/ClientRunning.png)  
 
 ### Diagrams
-**Client Class Diagram**  
+### C/S Sequence Diagram
+![](demoPic/CS%20Sequence%20Diagram.png)  
+
+#### Client Class Diagram  
 ![](demoPic/ClientClassDiagram.png)  
 
-**Server Class Diagram**  
-![](demoPic/ServerClassDiagram.png) 
+#### Server Class Diagram  
+![](demoPic/ServerClassDiagram.png)  
 
-**Session State Diagram**
-![](demoPic/ClientStateDiagram.png)
+#### Session State Diagram
+![](demoPic/ClientStateDiagram.png)  
+
+### Credit
+#### Projects
+
+* [smart-socket](https://github.com/smartboot/smart-socket): The socket communication implementation is based on this
+ framework, for the excellent work done by [三刀](https://gitee.com/qsyjcsxdl)
+ 

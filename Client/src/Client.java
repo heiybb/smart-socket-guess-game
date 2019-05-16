@@ -5,6 +5,7 @@ import org.smartboot.socket.transport.WriteBuffer;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.channels.UnresolvedAddressException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -18,11 +19,25 @@ import java.util.concurrent.ExecutionException;
  */
 @SuppressWarnings("StatementWithEmptyBody")
 class Client {
+    /**
+     * State record in the client side
+     */
+    static boolean PENDING = false;
+    static boolean UNDEFINE = false;
+    static boolean GAMING = false;
+
+    /**
+     * Auto Test function
+     */
     static boolean AUTO_GUESS = false;
     private static boolean AUTO_REG = false;
+
     private static AioSession<String> clientAioSession;
 
-    private Client(String host, int port) throws IOException {
+    Client(String host, int port, boolean autoReg, boolean autoGuess) throws IOException {
+        AUTO_REG = autoReg;
+        AUTO_GUESS = autoGuess;
+
         AioQuickClient<String> client = new AioQuickClient<>(host, port,
                 new StringProtocol(),
                 new ClientMsgProcessor());
@@ -32,6 +47,7 @@ class Client {
 
             //auto register
             if (AUTO_REG) {
+                //Wait for 1 sec to register
                 long waitUntil = System.nanoTime() + (long) (1e9);
                 while (waitUntil > System.nanoTime()) {
                 }
@@ -41,7 +57,8 @@ class Client {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String msg;
             while ((msg = br.readLine()) != null) {
-                clientAioWrite(msg);
+                //input check to send or not
+                inputCheck(msg);
             }
         } catch (ExecutionException | InterruptedException e) {
             System.out.println(String
@@ -49,6 +66,44 @@ class Client {
 
             System.out.println("Close game now");
             System.exit(0);
+        }
+    }
+
+    /**
+     * Input check by the client state to save resource
+     *
+     * @param msg pre sent message to server
+     */
+    private static void inputCheck(String msg) {
+        boolean rt = false;
+        if (PENDING) {
+            if ("q".equals(msg)) {
+                rt = true;
+            }
+        } else if (UNDEFINE) {
+            if ("q".equals(msg)) {
+                rt = true;
+            }
+            if ("p".equals(msg)) {
+                rt = true;
+            }
+        } else if (GAMING) {
+            if ("e".equals(msg)) {
+                rt = true;
+            }
+            if (msg.startsWith("g ")) {
+                rt = true;
+            }
+            if ("q".equals(msg)) {
+                rt = true;
+            }
+        } else {
+            rt = "reg".equals(msg);
+        }
+        if (rt) {
+            clientAioWrite(msg);
+        } else {
+            System.out.println("Input invalid");
         }
     }
 
@@ -71,7 +126,6 @@ class Client {
     }
 
     public static void main(String[] args) {
-
         try {
             if (args.length != 4) {
                 throw new IndexOutOfBoundsException();
@@ -80,16 +134,19 @@ class Client {
                 int port = Integer.parseInt(args[1]);
                 String autoReg = args[2];
                 String autoGuess = args[3];
+                boolean reg = false;
+                boolean guess = false;
                 System.out.println("Initialize environment......");
+
                 if ("t".equals(autoReg)) {
-                    AUTO_REG = true;
+                    reg = true;
                     System.out.println("Auto register --> Enable");
                 } else {
                     System.out.println("Auto register --> Disable");
                 }
 
                 if ("t".equals(autoGuess)) {
-                    AUTO_GUESS = true;
+                    guess = true;
                     System.out.println("Auto guess --> Enable");
                 } else {
                     System.out.println("Auto guess --> Disable");
@@ -97,9 +154,12 @@ class Client {
                 System.out.println("Remote address --> " + host);
                 System.out.println("Remote port --> " + port + "\n");
 
-                new Client(host, port);
+                new Client(host, port, reg, guess);
             }
-        } catch (IOException io) {
+        } catch (UnresolvedAddressException host) {
+            System.out.println("Can't resolve the remote address");
+        } catch
+        (IOException io) {
             System.out.println("Error while creating aio session");
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Args error");
@@ -132,13 +192,9 @@ class Client {
         guessMap.put(18, "reg");
         guessMap.put(19, "g -13");
         List<String> guessed = new ArrayList<>(20);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ignored) {
 
-        }
         new Thread(() -> {
-            for (int i = 0; i < 15; i++) {
+            for (int i = 0; i < 10; i++) {
                 String guess;
                 do {
                     guess = guessMap.get(new Random().nextInt(guessMap.size()));
@@ -146,7 +202,7 @@ class Client {
                 guessed.add(guess);
                 String line = guess;
                 System.out.println(line);
-                clientAioWrite(line);
+                inputCheck(line);
                 long waitUntil = System.nanoTime() + (long) (0.5 * 1e9);
                 while (waitUntil > System.nanoTime()) {
                 }

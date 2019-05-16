@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @SuppressWarnings("ALL")
 public class Server {
     private static final int PLAYER_LIMIT = 3;
-    private static final int MAX_ROUND = 5;
+    private static final int MAX_ROUND = 50;
 
     private static final int WAIT_JOIN_INTERVAL = 15;
     private static final int ROUND_TIMEOUT = 35;
@@ -73,7 +73,7 @@ public class Server {
 
                 roundProcess(ROUND_TIMEOUT);
             } else {
-                logger.info("No player enter the game, start next round");
+                logger.info("No player enter the game, start next round check");
             }
         }
     }
