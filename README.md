@@ -63,8 +63,14 @@ This command is available at anytime.
 ![](demoPic/ClientRunning.png)  
 
 ### Diagrams
-### C/S Sequence Diagram
+#### C/S Sequence Diagram
 ![](demoPic/CS%20Sequence%20Diagram.png)  
+
+#### Server Sequence Diagram
+![](demoPic/ServerSequenceDiagram.png)  
+
+#### Client Sequence Diagram
+![](demoPic/ClientSequenceDiagram.png)  
 
 #### Client Class Diagram  
 ![](demoPic/ClientClassDiagram.png)  
