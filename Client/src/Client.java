@@ -191,6 +191,7 @@ class Client {
         guessMap.put(17, "q -13");
         guessMap.put(18, "reg");
         guessMap.put(19, "g -13");
+
         List<String> guessed = new ArrayList<>(20);
 
         new Thread(() -> {
